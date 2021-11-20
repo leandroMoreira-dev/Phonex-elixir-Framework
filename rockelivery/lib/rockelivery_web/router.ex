@@ -14,10 +14,10 @@ defmodule RockeliveryWeb.Router do
     plug :accepts, ["json"]
   end
 
-  scope "/", RockeliveryWeb do
-    pipe_through :browser
+  scope "/api", RockeliveryWeb do
+    pipe_through :api
 
-    get "/", PageController, :index
+    get "/", WelcomeController, :index
   end
 
   # Other scopes may use custom stacks.
